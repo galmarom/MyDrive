@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		ED340FB31DD60AB000D6E297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FB21DD60AB000D6E297 /* AppDelegate.swift */; };
-		ED340FB51DD60AB000D6E297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FB41DD60AB000D6E297 /* ViewController.swift */; };
+		ED340FB51DD60AB000D6E297 /* CurrencyExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FB41DD60AB000D6E297 /* CurrencyExchangeViewController.swift */; };
 		ED340FB81DD60AB000D6E297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED340FB61DD60AB000D6E297 /* Main.storyboard */; };
-		ED340FBB1DD60AB000D6E297 /* MyDriveTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED340FB91DD60AB000D6E297 /* MyDriveTest.xcdatamodeld */; };
 		ED340FBD1DD60AB000D6E297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED340FBC1DD60AB000D6E297 /* Assets.xcassets */; };
 		ED340FC01DD60AB000D6E297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED340FBE1DD60AB000D6E297 /* LaunchScreen.storyboard */; };
 		ED340FCB1DD60AB100D6E297 /* MyDriveTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FCA1DD60AB100D6E297 /* MyDriveTestTests.swift */; };
 		ED340FD61DD60AB100D6E297 /* MyDriveTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FD51DD60AB100D6E297 /* MyDriveTestUITests.swift */; };
+		ED340FE81DD6121B00D6E297 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FE71DD6121B00D6E297 /* CoreDataHelper.swift */; };
+		ED776D521DD92F7100215B74 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED776D501DD92F7100215B74 /* NetworkTests.swift */; };
+		ED776D531DD92F7100215B74 /* CoreDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED776D511DD92F7100215B74 /* CoreDataHelperTests.swift */; };
+		EDA9FC721DD8ADB500B3BDBC /* ExchangeRateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9FC701DD8ADB500B3BDBC /* ExchangeRateEntity.swift */; };
+		EDA9FC731DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9FC711DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift */; };
+		EDA9FC751DD8B00200B3BDBC /* RatesExchangeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9FC741DD8B00200B3BDBC /* RatesExchangeHelper.swift */; };
+		EDB9CE631DD635D000048FFE /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9CE621DD635D000048FFE /* NetworkHelper.swift */; };
+		EDF64B8C1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF64B8A1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +44,8 @@
 /* Begin PBXFileReference section */
 		ED340FAF1DD60AB000D6E297 /* MyDriveTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDriveTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED340FB21DD60AB000D6E297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED340FB41DD60AB000D6E297 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED340FB41DD60AB000D6E297 /* CurrencyExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeViewController.swift; sourceTree = "<group>"; };
 		ED340FB71DD60AB000D6E297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED340FBA1DD60AB000D6E297 /* MyDriveTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDriveTest.xcdatamodel; sourceTree = "<group>"; };
 		ED340FBC1DD60AB000D6E297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED340FBF1DD60AB000D6E297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED340FC11DD60AB000D6E297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 		ED340FD11DD60AB100D6E297 /* MyDriveTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDriveTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED340FD51DD60AB100D6E297 /* MyDriveTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDriveTestUITests.swift; sourceTree = "<group>"; };
 		ED340FD71DD60AB100D6E297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED340FE71DD6121B00D6E297 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		ED776D501DD92F7100215B74 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		ED776D511DD92F7100215B74 /* CoreDataHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelperTests.swift; sourceTree = "<group>"; };
+		EDA9FC701DD8ADB500B3BDBC /* ExchangeRateEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateEntity.swift; sourceTree = "<group>"; };
+		EDA9FC711DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExchangeRateEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDA9FC741DD8B00200B3BDBC /* RatesExchangeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesExchangeHelper.swift; sourceTree = "<group>"; };
+		EDB9CE621DD635D000048FFE /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		EDF64B8B1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeRatesModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +113,13 @@
 		ED340FB11DD60AB000D6E297 /* MyDriveTest */ = {
 			isa = PBXGroup;
 			children = (
-				ED340FB21DD60AB000D6E297 /* AppDelegate.swift */,
-				ED340FB41DD60AB000D6E297 /* ViewController.swift */,
+				EDA9FC701DD8ADB500B3BDBC /* ExchangeRateEntity.swift */,
+				EDA9FC711DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift */,
+				ED340FE61DD610E800D6E297 /* Helpers */,
+				ED340FE31DD60C2F00D6E297 /* Supporting files */,
+				ED340FB41DD60AB000D6E297 /* CurrencyExchangeViewController.swift */,
 				ED340FB61DD60AB000D6E297 /* Main.storyboard */,
-				ED340FBC1DD60AB000D6E297 /* Assets.xcassets */,
-				ED340FBE1DD60AB000D6E297 /* LaunchScreen.storyboard */,
-				ED340FC11DD60AB000D6E297 /* Info.plist */,
-				ED340FB91DD60AB000D6E297 /* MyDriveTest.xcdatamodeld */,
+				EDF64B8A1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodeld */,
 			);
 			path = MyDriveTest;
 			sourceTree = "<group>";
@@ -113,6 +127,8 @@
 		ED340FC91DD60AB100D6E297 /* MyDriveTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED776D501DD92F7100215B74 /* NetworkTests.swift */,
+				ED776D511DD92F7100215B74 /* CoreDataHelperTests.swift */,
 				ED340FCA1DD60AB100D6E297 /* MyDriveTestTests.swift */,
 				ED340FCC1DD60AB100D6E297 /* Info.plist */,
 			);
@@ -126,6 +142,27 @@
 				ED340FD71DD60AB100D6E297 /* Info.plist */,
 			);
 			path = MyDriveTestUITests;
+			sourceTree = "<group>";
+		};
+		ED340FE31DD60C2F00D6E297 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				ED340FB21DD60AB000D6E297 /* AppDelegate.swift */,
+				ED340FBC1DD60AB000D6E297 /* Assets.xcassets */,
+				ED340FBE1DD60AB000D6E297 /* LaunchScreen.storyboard */,
+				ED340FC11DD60AB000D6E297 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		ED340FE61DD610E800D6E297 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED340FE71DD6121B00D6E297 /* CoreDataHelper.swift */,
+				EDB9CE621DD635D000048FFE /* NetworkHelper.swift */,
+				EDA9FC741DD8B00200B3BDBC /* RatesExchangeHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +233,7 @@
 				TargetAttributes = {
 					ED340FAE1DD60AB000D6E297 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = UBZ2K4UWRL;
 						ProvisioningStyle = Automatic;
 					};
 					ED340FC51DD60AB100D6E297 = {
@@ -262,9 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED340FB51DD60AB000D6E297 /* ViewController.swift in Sources */,
+				EDB9CE631DD635D000048FFE /* NetworkHelper.swift in Sources */,
+				EDA9FC721DD8ADB500B3BDBC /* ExchangeRateEntity.swift in Sources */,
+				EDF64B8C1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodeld in Sources */,
+				ED340FE81DD6121B00D6E297 /* CoreDataHelper.swift in Sources */,
+				ED340FB51DD60AB000D6E297 /* CurrencyExchangeViewController.swift in Sources */,
+				EDA9FC731DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift in Sources */,
+				EDA9FC751DD8B00200B3BDBC /* RatesExchangeHelper.swift in Sources */,
 				ED340FB31DD60AB000D6E297 /* AppDelegate.swift in Sources */,
-				ED340FBB1DD60AB000D6E297 /* MyDriveTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED776D521DD92F7100215B74 /* NetworkTests.swift in Sources */,
 				ED340FCB1DD60AB100D6E297 /* MyDriveTestTests.swift in Sources */,
+				ED776D531DD92F7100215B74 /* CoreDataHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -403,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -416,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UBZ2K4UWRL;
 				INFOPLIST_FILE = MyDriveTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.MyDriveTest";
@@ -428,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UBZ2K4UWRL;
 				INFOPLIST_FILE = MyDriveTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GalMaroms-gmail.com.MyDriveTest";
@@ -509,6 +556,7 @@
 				ED340FDC1DD60AB100D6E297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED340FDD1DD60AB100D6E297 /* Build configuration list for PBXNativeTarget "MyDriveTestTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +565,7 @@
 				ED340FDF1DD60AB100D6E297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED340FE01DD60AB100D6E297 /* Build configuration list for PBXNativeTarget "MyDriveTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,17 +574,18 @@
 				ED340FE21DD60AB100D6E297 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		ED340FB91DD60AB000D6E297 /* MyDriveTest.xcdatamodeld */ = {
+		EDF64B8A1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				ED340FBA1DD60AB000D6E297 /* MyDriveTest.xcdatamodel */,
+				EDF64B8B1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodel */,
 			);
-			currentVersion = ED340FBA1DD60AB000D6E297 /* MyDriveTest.xcdatamodel */;
-			path = MyDriveTest.xcdatamodeld;
+			currentVersion = EDF64B8B1DD62D6200E33663 /* ExchangeRatesModel.xcdatamodel */;
+			path = ExchangeRatesModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
