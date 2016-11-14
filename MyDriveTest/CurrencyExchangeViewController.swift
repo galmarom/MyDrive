@@ -9,13 +9,21 @@
 import UIKit
 
 
-class CurrencyExchangeViewController: UIViewController , UIPickerViewDelegate,UIPickerViewDataSource {
+class CurrencyExchangeViewController: UIViewController , UIPickerViewDelegate,UIPickerViewDataSource, UITextFieldDelegate {
     
     //UI elements
     @IBOutlet weak var sourcePickerView: UIPickerView!
     @IBOutlet weak var targetPickerView: UIPickerView!
-    @IBOutlet weak var convertionAmountTextField: UITextField!
-    @IBOutlet weak var convertionResultLabel: UILabel!
+    @IBOutlet weak var convertionAmountTextField: UITextField!{
+        didSet{
+            self.convertionAmountTextField.becomeFirstResponder()
+        }
+    }
+    @IBOutlet weak var convertionResultLabel: UILabel!{
+        didSet{
+            self.convertionResultLabel.isHidden = true
+        }
+    }
     var activityIndicator: UIActivityIndicatorView?
     
     //Local variables
@@ -86,12 +94,7 @@ class CurrencyExchangeViewController: UIViewController , UIPickerViewDelegate,UI
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if let amount = Float(self.convertionAmountTextField.text!){
-            let selectedSource = currencies[sourcePickerView.selectedRow(inComponent: 0)]
-            let selectedTarget = currencies[targetPickerView.selectedRow(inComponent: 0)]
-            self.convertionResultLabel.text =
-                String(RateExchangeHelper.sharedInstance.convert(amount: amount, from: selectedSource, to: selectedTarget))
-        }
+        setConversionTextFieldWithNewAmount()
     }
 
     
@@ -115,6 +118,25 @@ class CurrencyExchangeViewController: UIViewController , UIPickerViewDelegate,UI
         }
     }
     
+    func setConversionTextFieldWithNewAmount(){
+        if let amount = Float(self.convertionAmountTextField.text!){
+            
+            let selectedSource = currencies[sourcePickerView.selectedRow(inComponent: 0)]
+            let selectedTarget = currencies[targetPickerView.selectedRow(inComponent: 0)]
+            self.convertionResultLabel.text =
+                String(RateExchangeHelper.sharedInstance.convert(amount: amount, from: selectedSource, to: selectedTarget))
+            self.convertionResultLabel.sizeToFit()
+            self.convertionResultLabel.center = CGPoint(x: self.view.center.x, y: self.convertionResultLabel.center.y)
+        }
+    }
+    
+    //MARK: Text field delegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        self.convertionResultLabel.isHidden = false
+        setConversionTextFieldWithNewAmount()
+        return true
+    }
+
     
 }
 

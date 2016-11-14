@@ -17,6 +17,7 @@
 		ED340FE81DD6121B00D6E297 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED340FE71DD6121B00D6E297 /* CoreDataHelper.swift */; };
 		ED776D521DD92F7100215B74 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED776D501DD92F7100215B74 /* NetworkTests.swift */; };
 		ED776D531DD92F7100215B74 /* CoreDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED776D511DD92F7100215B74 /* CoreDataHelperTests.swift */; };
+		ED776D581DD9665B00215B74 /* currenciesImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ED776D571DD9665B00215B74 /* currenciesImage.png */; };
 		EDA9FC721DD8ADB500B3BDBC /* ExchangeRateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9FC701DD8ADB500B3BDBC /* ExchangeRateEntity.swift */; };
 		EDA9FC731DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9FC711DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift */; };
 		EDA9FC751DD8B00200B3BDBC /* RatesExchangeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9FC741DD8B00200B3BDBC /* RatesExchangeHelper.swift */; };
@@ -58,6 +59,7 @@
 		ED340FE71DD6121B00D6E297 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		ED776D501DD92F7100215B74 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		ED776D511DD92F7100215B74 /* CoreDataHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelperTests.swift; sourceTree = "<group>"; };
+		ED776D571DD9665B00215B74 /* currenciesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currenciesImage.png; sourceTree = "<group>"; };
 		EDA9FC701DD8ADB500B3BDBC /* ExchangeRateEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateEntity.swift; sourceTree = "<group>"; };
 		EDA9FC711DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExchangeRateEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EDA9FC741DD8B00200B3BDBC /* RatesExchangeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesExchangeHelper.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		ED340FB11DD60AB000D6E297 /* MyDriveTest */ = {
 			isa = PBXGroup;
 			children = (
+				ED776D541DD9643400215B74 /* assets */,
 				EDA9FC701DD8ADB500B3BDBC /* ExchangeRateEntity.swift */,
 				EDA9FC711DD8ADB500B3BDBC /* ExchangeRateEntity+CoreDataProperties.swift */,
 				ED340FE61DD610E800D6E297 /* Helpers */,
@@ -163,6 +166,14 @@
 				EDA9FC741DD8B00200B3BDBC /* RatesExchangeHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		ED776D541DD9643400215B74 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				ED776D571DD9665B00215B74 /* currenciesImage.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED340FC01DD60AB000D6E297 /* LaunchScreen.storyboard in Resources */,
+				ED776D581DD9665B00215B74 /* currenciesImage.png in Resources */,
 				ED340FBD1DD60AB000D6E297 /* Assets.xcassets in Resources */,
 				ED340FB81DD60AB000D6E297 /* Main.storyboard in Resources */,
 			);
