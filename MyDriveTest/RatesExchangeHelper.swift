@@ -9,7 +9,16 @@
 import UIKit
 import CoreData
 
-
+/**The main data structure I made is a table (Dictionary) that represents the rates against the dollars, i.e - the amount of money one will get if he transferred his money to any supported currency.
+ We can look at it like that:
+ USD | EUR | GBP | CHF
+ USD       1    |   0.9  | 0.8   |  0.85
+ 
+ Or in words:
+ If the conversion is from USD: I simply returns the value in the table: if one converts 1 USD to 1 EUR he gets 0.9 EUR.
+ If the conversion is to USD: In order to calculate conversion between the USD in the EUR I calculate the reciprocal.
+ If the conversion is from two currencies that are different from the USD I simply calculated the first currency value in USD (using the reciprocal) and convert it to the second currency using the  dictionary.
+ */
 class RateExchangeHelper: NSObject, NSFetchedResultsControllerDelegate {
     
     static let principalCurrency = "USD"

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class CurrencyExchangeViewController: UIViewController , UIPickerViewDelegate,UIPickerViewDataSource, UITextFieldDelegate {
     
     //UI elements
@@ -27,7 +26,7 @@ class CurrencyExchangeViewController: UIViewController , UIPickerViewDelegate,UI
     var activityIndicator: UIActivityIndicatorView?
     
     //Local variables
-    private var currencies = [String]()
+    private var currencies = [String]() //Used in order to simplify the usage for the UIPickers and on a stable-sorted DS
     
     override func viewDidLoad() {
         super.viewDidLoad()
